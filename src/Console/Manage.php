@@ -26,7 +26,7 @@ class Manage extends Command
     /**
      * Currency storage instance
      *
-     * @var \Torann\Currency\Contracts\DriverInterface
+     * @var \Fypex\Currency\Contracts\DriverInterface
      */
     protected $storage;
 

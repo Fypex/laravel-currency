@@ -241,7 +241,7 @@ class Currency
             if (config('app.debug', false) === true) {
                 $this->currencies_cache = $this->getDriver()->all();
             } else {
-                $this->currencies_cache = $this->cache->rememberForever('torann.currency', function () {
+                $this->currencies_cache = $this->cache->rememberForever('fypex.currency', function () {
                     return $this->getDriver()->all();
                 });
             }
@@ -265,7 +265,7 @@ class Currency
     /**
      * Get storage driver.
      *
-     * @return \Torann\Currency\Contracts\DriverInterface
+     * @return \Fypex\Currency\Contracts\DriverInterface
      */
     public function getDriver()
     {
@@ -286,7 +286,7 @@ class Currency
     /**
      * Get formatter driver.
      *
-     * @return \Torann\Currency\Contracts\FormatterInterface
+     * @return \Fypex\Currency\Contracts\FormatterInterface
      */
     public function getFormatter()
     {
@@ -309,7 +309,7 @@ class Currency
      */
     public function clearCache()
     {
-        $this->cache->forget('torann.currency');
+        $this->cache->forget('fypex.currency');
         $this->currencies_cache = null;
     }
 

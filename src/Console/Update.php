@@ -28,7 +28,7 @@ class Update extends Command
     /**
      * Currency instance
      *
-     * @var \Torann\Currency\Currency
+     * @var \Fypex\Currency\Currency
      */
     protected $currency;
 
